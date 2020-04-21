@@ -7,7 +7,6 @@ language: "python"
 
 # Python versions to test on
 python:
-- "2.7"
 - "3.7"
 - "3.8"
 
@@ -21,30 +20,22 @@ install:
 # Add ansible.cfg to pick up roles path.
 - "printf '[defaults]\nroles_path = ../' > ansible.cfg"
 
-script:
-# Print versions
+# Print versions before running
+before_script:
+- "cat ansible.cfg"
 - "ansible --version"
 - "ansible-lint --version"
 - "yamllint --version"
 - "molecule --version"
 
-# Default test: Alpine
-- "molecule test"
+stages:
+- "test"
 
-# Test: Arch Linux
-- "molecule test --scenario-name arch"
-
-# Test: CentOS
-- "molecule test --scenario-name centos"
-
-# Test: Debian
-- "molecule test --scenario-name debian"
-
-# Test: Fedora
-- "molecule test --scenario-name fedora"
-
-# Test: OpenSUSE
-- "molecule test --scenario-name opensuse"
-
-# Test: Ubuntu
-- "molecule test --scenario-name ubuntu"
+jobs:
+  include:
+  
+  # Default test: Alpine
+  - stage: "test"
+    name: "Alpine"
+    script:
+    - "molecule test"
