@@ -1,0 +1,57 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+galaxy_info:
+  author: "Mira \"Mireiawen\" Manninen"
+  description: "Install Mosh mobile shell"
+
+  license: "MIT"
+
+  min_ansible_version: 2.9
+
+  platforms:
+  - name: "Alpine"
+    versions:
+    - "3"
+  - name: "Arch"
+    versions:
+    - "all"
+  - name: "CentOS"
+    versions:
+    - "7"
+    - "8"
+  - name: "Debian"
+    versions:
+    - "8 Jessie"
+    - "9 Stretch"
+    - "10 Buster"
+  - name: "Fedora"
+    versions:
+    - "26"
+    - "27"
+    - "28"
+    - "29"
+    - "30"
+    - "31"
+  - name: "OpenSUSE"
+    versions:
+    - "Leap 15.1"
+  - name: "RHEL"
+    versions:
+    - "7"
+    - "8"
+  - name: "Ubuntu"
+    versions:
+    - "14.04 Trusty"
+    - "16.04 Xenial"
+    - "18.04 Bionic"
+    - "19.10 Eoan"
+    - "20.04 Focal"
+
+  galaxy_tags:
+  - "linux"
+  - "system"
+  - "networking"
+  - "mosh"
+
+dependencies: []

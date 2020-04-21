@@ -1,0 +1,7 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+- name: "Install Mobile Shell (MoSH)"
+  package:
+    name: "{{ mosh_package }}"
+    state: "latest"
