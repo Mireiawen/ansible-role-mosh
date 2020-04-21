@@ -13,7 +13,7 @@ install:
 - "pip install ansible ansible-lint yamllint molecule docker"
 
 # Add ansible.cfg to pick up roles path.
-- "printf '[defaults]\nroles_path = \"../\"\n' >'ansible.cfg'"
+- "printf '[defaults]\nroles_path = \"./\"\n' >'ansible.cfg'"
 
 # Print versions before running
 before_script:
