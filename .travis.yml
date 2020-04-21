@@ -66,5 +66,8 @@ jobs:
     script:
     - "molecule test --scenario-name opensuse"
 
-# Test: Ubuntu
-- "molecule test --scenario-name ubuntu"
+  # Test: Ubuntu
+  - stage: "test"
+    name: "Ubuntu"
+    script:
+    - "molecule test --scenario-name ubuntu"
