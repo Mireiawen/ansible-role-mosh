@@ -31,7 +31,7 @@ stages:
 
 jobs:
   include:
-  
+
   # Default test: Alpine
   - stage: "test"
     name: "Alpine"
