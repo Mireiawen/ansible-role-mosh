@@ -71,3 +71,6 @@ jobs:
     name: "Ubuntu"
     script:
     - "molecule test --scenario-name ubuntu"
+
+notify:
+  webhooks: "https://galaxy.ansible.com/api/v1/notifications/"
