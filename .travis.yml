@@ -12,12 +12,12 @@ install:
 # Install dependencies
 - "pip install ansible ansible-lint yamllint molecule docker"
 
-# Add ansible.cfg to pick up roles path.
-- "printf '[defaults]\nroles_path = \"./\"\n' >'ansible.cfg'"
+# Make sure the role is found
+- "cd .."
+- "ln -s ansible-role-mosh mireiawen.mosh"
 
 # Print versions before running
 before_script:
-- "cat ansible.cfg"
 - "ansible --version"
 - "ansible-lint --version"
 - "yamllint --version"
@@ -33,7 +33,4 @@ jobs:
   - stage: "test"
     name: "Alpine"
     script:
-    - "pwd"
-    - "ls"
-    - "cat ansible.cfg"
     - "molecule test"
