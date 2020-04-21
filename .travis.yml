@@ -1,8 +1,11 @@
 ---
 ## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
 
+os: "linux"
+dist: "xenial"
 language: "python"
 
+# Python versions to test on
 python:
 - "2.7"
 - "3.7"
@@ -12,19 +15,36 @@ services:
 - "docker"
 
 install:
+# Install dependencies
 - "pip install ansible ansible-lint yamllint molecule docker"
 
+# Add ansible.cfg to pick up roles path.
+- "printf '[defaults]\nroles_path = ../' > ansible.cfg"
+
 script:
+# Print versions
 - "ansible --version"
 - "ansible-lint --version"
 - "yamllint --version"
 - "molecule --version"
+
+# Default test: Alpine
 - "molecule test"
+
+# Test: Arch Linux
 - "molecule test --scenario-name arch"
+
+# Test: CentOS
 - "molecule test --scenario-name centos"
-- "molecule test --scenario-name common"
+
+# Test: Debian
 - "molecule test --scenario-name debian"
-- "molecule test --scenario-name default"
+
+# Test: Fedora
 - "molecule test --scenario-name fedora"
+
+# Test: OpenSUSE
 - "molecule test --scenario-name opensuse"
+
+# Test: Ubuntu
 - "molecule test --scenario-name ubuntu"
