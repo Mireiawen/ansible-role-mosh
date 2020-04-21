@@ -5,9 +5,6 @@ os: "linux"
 dist: "xenial"
 language: "python"
 
-# Python version to test on
-python: "3.8"
-
 services:
 - "docker"
 
@@ -36,4 +33,7 @@ jobs:
   - stage: "test"
     name: "Alpine"
     script:
+    - "pwd"
+    - "ls"
+    - "cat ansible.cfg"
     - "molecule test"
