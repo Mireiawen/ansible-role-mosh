@@ -4,7 +4,7 @@ Installs the Mobile Shell package mosh. Should work on most distributions.
 
 ## Requirements
 
-EPEL repository is needed on Red Hat and CentOS and based distributions. You can use for example (https://galaxy.ansible.com/geerlingguy/repo-epel](Ansible Role: EPEL Repository)
+EPEL repository is needed on Red Hat and CentOS and based distributions. You can use for example [Ansible Role: EPEL Repository](https://galaxy.ansible.com/geerlingguy/repo-epel)
 
 ## Role Variables
 
