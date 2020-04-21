@@ -13,8 +13,9 @@ install:
 - "pip install ansible ansible-lint yamllint molecule docker"
 
 # Make sure the role is found
-- "cd .."
+- "pushd .."
 - "ln -s ansible-role-mosh mireiawen.mosh"
+- "popd"
 
 # Print versions before running
 before_script:
