@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/Mireiawen/ansible-role-mosh.svg?branch=master)](https://travis-ci.com/Mireiawen/ansible-role-mosh) [![Ansible Galaxy](https://img.shields.io/badge/Ansible%20Galaxy-mireiawen.mosh-blueviolet)](https://galaxy.ansible.com/mireiawen/mosh)
+
+
 # Mobile Shell
 
 Installs the Mobile Shell package mosh. Should work on most distributions.
@@ -22,3 +25,4 @@ None.
 
 ## License
 MIT, see `LICENSE`
+
