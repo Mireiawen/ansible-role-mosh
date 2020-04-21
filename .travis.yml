@@ -1,0 +1,30 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+language: "python"
+
+python:
+- "2.7"
+- "3.7"
+- "3.8"
+
+services:
+- "docker"
+
+install:
+- "pip install ansible ansible-lint yamllint molecule docker"
+
+script:
+- "ansible --version"
+- "ansible-lint --version"
+- "yamllint --version"
+- "molecule --version"
+- "molecule test"
+- "molecule test --scenario-name arch"
+- "molecule test --scenario-name centos"
+- "molecule test --scenario-name common"
+- "molecule test --scenario-name debian"
+- "molecule test --scenario-name default"
+- "molecule test --scenario-name fedora"
+- "molecule test --scenario-name opensuse"
+- "molecule test --scenario-name ubuntu"
