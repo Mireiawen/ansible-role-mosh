@@ -3,6 +3,7 @@
 
 galaxy_info:
   author: "Mira \"Mireiawen\" Manninen"
+  role_name: "mosh"
   description: "Install Mosh mobile shell"
 
   license: "MIT"
@@ -12,19 +13,18 @@ galaxy_info:
   platforms:
   - name: "Alpine"
     versions:
-    - "3"
-  - name: "Arch"
+    - "any"
+  - name: "ArchLinux"
     versions:
-    - "all"
-  - name: "CentOS"
-    versions:
-    - "7"
-    - "8"
+    - "any"
   - name: "Debian"
     versions:
-    - "8 Jessie"
-    - "9 Stretch"
-    - "10 Buster"
+    # "8 Jessie"
+    - "jessie"
+    # "9 Stretch"
+    - "stretch"
+    # "10 Buster"
+    - "buster"
   - name: "Fedora"
     versions:
     - "26"
@@ -35,18 +35,25 @@ galaxy_info:
     - "31"
   - name: "OpenSUSE"
     versions:
-    - "Leap 15.1"
-  - name: "RHEL"
+    # "Leap 15.1"
+    - 15.1
+  # RedHat Enterprise Linux
+  - name: "EL"
     versions:
     - "7"
     - "8"
   - name: "Ubuntu"
     versions:
-    - "14.04 Trusty"
-    - "16.04 Xenial"
-    - "18.04 Bionic"
-    - "19.10 Eoan"
-    - "20.04 Focal"
+    # "14.04 Trusty"
+    - "trusty"
+    # "16.04 Xenial"
+    - "xenial"
+    # "18.04 Bionic"
+    - "bionic"
+    # "19.10 Eoan"
+    - "eoan"
+    # "20.04 Focal"
+    - "focal"
 
   galaxy_tags:
   - "linux"
