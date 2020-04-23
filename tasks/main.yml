@@ -4,4 +4,4 @@
 - name: "Install Mobile Shell (MoSH)"
   package:
     name: "{{ mosh_package }}"
-    state: "latest"
+    state: "{{ mosh_state }}"
