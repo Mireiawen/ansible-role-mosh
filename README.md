@@ -19,10 +19,11 @@ None.
 
 ## Example Playbook
 
-    - hosts: "servers"
-      roles:
-         - "mireiawen.mosh"
+```
+- hosts: "servers"
+  roles:
+  - "mireiawen.mosh"
+```
 
 ## License
 MIT, see `LICENSE`
-
