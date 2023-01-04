@@ -1,25 +1,22 @@
-[![Build Status](https://travis-ci.com/Mireiawen/ansible-role-mosh.svg?branch=master)](https://travis-ci.com/Mireiawen/ansible-role-mosh) [![Ansible Galaxy](https://img.shields.io/badge/Ansible%20Galaxy-mireiawen.mosh-blueviolet)](https://galaxy.ansible.com/mireiawen/mosh)
-
+![Build Status](https://img.shields.io/gitlab/pipeline-status/mireiawenrose/ansible-roles/mosh?branch=master&style=plastic) [![Ansible Galaxy](https://img.shields.io/badge/Ansible%20Galaxy-mireiawen.mosh-blueviolet?style=plastic)](https://galaxy.ansible.com/mireiawen/mosh)
 
 # Mobile Shell
-
 Installs the Mobile Shell package mosh. Should work on most distributions.
 
 ## Requirements
-
-EPEL repository is needed on Red Hat and CentOS and based distributions. You can use for example [Ansible Role: EPEL Repository](https://galaxy.ansible.com/geerlingguy/repo-epel)
+None.
 
 ## Role Variables
-
-If needed, the mosh package name can be changed by specifying the `mosh_package` variable. It defaults to `mosh`
+ Configuration key       | Description                        | Default value
+-------------------------|------------------------------------|----------------------
+ `mosh_package`          | The name of the package to install | `mosh`
+ `mosh_status`           | The desired status for the package | `latest`
 
 ## Dependencies
-
 None.
 
 ## Example Playbook
-
-```
+```yaml
 - hosts: "servers"
   roles:
   - "mireiawen.mosh"
